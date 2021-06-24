@@ -1,7 +1,21 @@
-<html>
-<body>
+<?php
+              
+if(isset($_POST['name']))
+{
+$data=$_POST['name'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
 
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
-</body>
-</html>
+if(isset($_POST['email']))
+{
+$data=$_POST['email'];
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+
+?>
+ 
+
